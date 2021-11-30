@@ -319,9 +319,10 @@ body {
 
 /* -SVG-наши-преимущества-*/
 .thumb{
-  padding: 25px 0;
-  text-align: center;
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
+  border-radius: 4px;
 
   width: 100%;
   min-height: 120px;
@@ -622,15 +623,31 @@ fill: currentColor;
   
 }
 
-.btn-foter{
-  background-image: url(/images/paper-airplane.svg);
-  background-repeat: no-repeat;
-  background-position: 148px 13px;
-  padding-left: 29px;
-  text-align: left;
+.btn-footer{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px 29px;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
 }
 
+.btn-text{
+  margin-right: 10px;
+  
 
+}
+
+.social-icon-btn{
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  
+}
 
 /* <!-------- Модальное окно -----> */
 .backdrop{
@@ -848,15 +865,29 @@ transition-timing-function: var(--timing-function);
   transition-property: background-color , border;
   transition-duration: var(--tr-duration);
   transition-timing-function: var(--timing-function);
+} 
+                          
+  .checkbox:checked +  .social-icon-checkbox{
+  margin-right: 7px;  
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background-color:var(--accent-color);
+  border: 2px solid var(--accent-color);
 }
 
-.checkbox:checked + .icon{
-  background-color:#2196F3;
-  border: 2px solid var(--accent-color);
-  background-image: url(/images/icon-check.svg);
+.social-icon-checkbox {
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--main-title-color);
+    border-radius: 4px;
+    background-color: var(--current-white-color);
+    transition-property: background-color, border;
+    transition-duration: var(--tr-duration);
+    transition-timing-function: var(--timing-function);
+}
 
-  
-  }
 
 .text-checkbox{
   font-size: 14px;
@@ -870,7 +901,6 @@ transition-timing-function: var(--timing-function);
 .agreement{
 color: #2196F3;
 }
-
 /****** -----------------------Портфолио---------------------*****/
 
 /* <!-- Секция фильтры --> */
